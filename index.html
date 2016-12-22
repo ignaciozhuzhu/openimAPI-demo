@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    	var uid,nickname,password;
+    	function get(){
+    		getvalues();
+    		window.open("http://127.0.0.1:8888/?api=get&uid="+uid);
+    	}
+    	function add(){
+    		getvalues();
+    		window.open("http://127.0.0.1:8888/?api=add&uid="+uid+"&nickname="+nickname+"&password="+password);
+    	}
+    	function update(){
+    		getvalues();
+    		window.open("http://127.0.0.1:8888/?api=update&uid="+uid+"&nickname="+nickname+"&password="+password);
+    	}
+    	function getvalues(){
+    		uid=document.getElementById("uid").value;
+    		nickname=document.getElementById("nickname").value;
+    		password=document.getElementById("password").value;
+    	}
+    </script>
+</head>
+
+<body>
+uid:<input id="uid" /></br>
+nickname:<input id="nickname" /></br>
+password:<input id="password" /></br>
+<button onclick="get()">查询</button>
+<button onclick="add()">添加</button>
+<button onclick="update()">更新</button>
+</body>
+</html>

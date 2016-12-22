@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "ali-top-sdk": "^0.0.1",
+    "urllib": "^2.19.0"
+  }
+}
